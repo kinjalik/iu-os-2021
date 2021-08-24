@@ -1,0 +1,16 @@
+ 1414  cd iu-os-2021
+ 1415  ls
+ 1416  cd week01
+ 1417  nvim ex1.txt
+ 1418  ls /usr/bin | grep "gcc"
+ 1419  ls /usr/bin | grep "gcc" | sort
+ 1420  ls /usr/bin | grep "gcc" | sort | reverse
+ 1421  ls /usr/bin | grep "gcc" | sort --reverse
+ 1422  ls /usr/bin | grep "gcc" | sort --reverse > ex1.txt
+ 1423  ls
+ 1424  git add .
+ 1425  git commit -m "Task 1"
+ 1426  ls
+ 1427  pwd
+ 1428  whoami
+ 1429  history
