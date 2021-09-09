@@ -9,7 +9,7 @@
 int main() {
     while (1) {
         printf("$ ");
-        char buf[100];
+        char buf[100] = "";
         scanf("%s", buf);
 
         // Pipe the output
@@ -21,7 +21,7 @@ int main() {
         if (pid == 0) {
 
 
-            char* binary[100+5];
+            char* binary[100+5] = "";
             strcat(binary, "/bin/");
             strcat(binary, buf);
             char* argv[2] = {binary};
@@ -37,7 +37,7 @@ int main() {
             wait(NULL);
             close(p[1]);
 
-            char output[1024];
+            char output[1024] = "";
             while (read(p[0], output, sizeof(output)) != 0)
                 printf(output);
 
