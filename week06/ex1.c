@@ -15,6 +15,9 @@ int main() {
 
     int completed = 0;
     int t = 0;
+    
+    int averageT = 0;
+    int averageWaiting = 0;
     while (completed != n) {
         int minArrival = INT_MAX;
         int minId = -1;
@@ -32,12 +35,21 @@ int main() {
             continue;
         }
 
+        int waitingTime = t - arrival[minId];
+
         printf("[T = %d] Executing process %d...\n", t, minId);
         t += burst[minId];
         printf("[T = %d] Process %d has been executed.\n", t, minId);
         burst[minId] = arrival[minId] = -1;
         completed++;
+
+        int turnaround = t - arrival[minId];
+        printf("Process %d: turnaround time is %d, waiting time is %d", minId, turnaround, waitingTime);
+        averageT += turnaround;
+        averageWaiting += waitingTime;
     }
     printf("Completeion time: %d\n", t);
+    printf("Average turnaround time: %f\n", 1.0 * averageT / n);
+    printf("Average waiting time: %f\n", 1.0 * averageWaiting / n);
     return 0;
 }
