@@ -19,35 +19,33 @@ int main() {
     int averageT = 0;
     int averageWaiting = 0;
     while (completed != n) {
-        int minArrival = INT_MAX;
-        int minId = -1;
+        int minJobTime = INT_MAX;
+        int id = -1;
         for (int i = 0; i < n; i++) {
-            if (arrival[i] == -1)
+            if (arrival[i] > t)
                 continue;
-            if (arrival[i] > t) {
-                continue;
-            }
-            if (arrival[i] < minArrival) {
-                minArrival = arrival[i];
-                minId = i;
+            if (burst[i] < minJobTime) {
+                minJobTime = burst[i];
+                id = i;
             }
         }
-        if (minId == -1) {
+
+        if (id == -1) {
             printf("[T = %d] No processes to execute...\n", t);
             t++;
             continue;
         }
 
-        int waitingTime = t - arrival[minId];
+        int waitingTime = t - arrival[id];
 
-        printf("[T = %d] Executing process %d...\n", t, minId);
-        t += burst[minId];
-        printf("[T = %d] Process %d has been executed.\n", t, minId);
-        burst[minId] = arrival[minId] = -1;
+        printf("[T = %d] Executing process %d...\n", t, id);
+        t += burst[id];
+        printf("[T = %d] Process %d has been executed.\n", t, id);
+        burst[id] = arrival[id] = -1;
         completed++;
 
-        int turnaround = t - arrival[minId];
-        printf("Process %d: turnaround time is %d, waiting time is %d", minId, turnaround, waitingTime);
+        int turnaround = t - arrival[id];
+        printf("Process %d: turnaround time is %d, waiting time is %d", id, turnaround, waitingTime);
         averageT += turnaround;
         averageWaiting += waitingTime;
     }
