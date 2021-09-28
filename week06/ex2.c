@@ -54,3 +54,4 @@ int main() {
     printf("Average waiting time: %f\n", 1.0 * averageWaiting / n);
     return 0;
 }
+
