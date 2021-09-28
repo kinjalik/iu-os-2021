@@ -70,3 +70,4 @@ int main() {
     printf("Average waiting time: %f\n", 1.0 * waitSum / n);
     return 0;
 }
+
