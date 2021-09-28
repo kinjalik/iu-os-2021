@@ -43,8 +43,8 @@ int main() {
         }
         if (startTime[id] == -1)
             startTime[id] = t;
-        if (burst[i] > q) {
-            burst[i] -= q;
+        if (burst[id] > q) {
+            burst[id] -= q;
             t += q;
             printf("[T = %d] Stopped process %d due to exceeding the quantum.", t, id);
         } else  {
@@ -58,8 +58,8 @@ int main() {
     int waitSum = 0;
     int turnSum = 0;
     for (int i = 0; i < n; i++) {
-        int turntime = lastStop[id] - startTime[id];
-        int waittime = waitingTime[id];
+        int turntime = lastStop[i] - startTime[i];
+        int waittime = waitingTime[i];
         printf("[PID = %d] Waiting time: %d, turnaround time: %d", i, turntime, waittime);
         waitSum += waittime;
         turnSum += turntime;
