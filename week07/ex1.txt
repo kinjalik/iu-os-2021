@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+1224611	  15544	  14736	1254891	 1325eb	/bin/gcc
