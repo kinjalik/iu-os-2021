@@ -1,0 +1,4 @@
+Page size - 8KB or 8192 bit or 2^13 bits - or offset size.
+Virtual address space in 16 bit is 2^16 or 65536 addresses. We use 13 bits for offset and 3 bits for addressing page table. Therefore, we can store 2^3 or 8 entries in page table.
+
+Answer is 8

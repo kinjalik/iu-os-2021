@@ -1,0 +1,5 @@
+Physical address:
+Address of physical cell in memory device (eg.RAM).
+
+Virtual address:
+Abstract address, which is mapped into physical address on, may be, different devices (eg. some part in RAM, some part in swapfile on harddisk)
