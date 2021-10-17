@@ -1,0 +1,14 @@
+Low ratio (0.173913, N=3): 
+1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+
+High ratio (2.0, N=2):
+1 1 1 2 2 2 3 3 3 4 4 4 5 5 5 6 6 6 7 7 7 8 8 8 9 9 9
+
+Explanation:
+According to the algorithm, if the page is referenced more in short time, then higher probability we'll get hit. And opposite, if the page referenced more in long time, rarely, then lower probability we'll get hit.
+
+In example of low ratio we will have faults almost every time, because pages referenced too rare.
+
+In example of high ratio we will have faults only after
+a) We accessed first 2 bunches of accessses
+b) We've done with current bunch
