@@ -1,0 +1,3 @@
+-rw-rw-rw- 1 kinjalik kinjalik 7 Oct 26 14:35 _ex3.txt
+-rwx---rwx 1 kinjalik kinjalik 7 Oct 26 14:35 _ex3.txt
+-rwxrwxrwx 1 kinjalik kinjalik 7 Oct 26 14:35 _ex3.txt
