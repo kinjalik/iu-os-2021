@@ -1,0 +1,5 @@
+Deadlock prevention is straightforward check, that next resource allocation will not cause a deadlock. Main problem of prevention is reduced throughput.
+
+Deadlock avoidance is a strategy used to maintain the safe state of a system. Main problem is that we need information about future resource allocation, which is not always possible, so there will be cases, when we will have to deal with unsafe state.
+
+Deadlock recovery is a approach of elimination already happened deadlock. In some strategies it may cause unpredictable behavior for processes. However, in my opinion this approach should be used with prevention or avoidance as "last chanse weapon"
